@@ -1,105 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP08_INTRODUCCION</title> 
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP08_INTRODUCCION</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/ejercicio.js"></script>
+  <script src="js/utils.js"></script>
 </head>
 
-<body>
-    <section>
-        <h2>1. Calculadora de Edad</h2>
-        <input type="text" id="nombreEdad" placeholder="Nombre">
-        <input type="text" id="fechaEdad" placeholder="YYYY-MM-DD">
-        <button onclick="calcularEdad(document.getElementById('fechaEdad').value, document.getElementById('nombreEdad').value)">Calcular</button>
-        <p id="mensaje1"></p>
-    </section>
-
-    <section>
-        <h2>2. Tirando Fruta</h2>
-        <input type="text" id="fruta" placeholder="Ingresá una fruta">
-        <button onclick="tirarFruta(document.getElementById('fruta').value)">Buscar</button>
-        <p id="mensaje2"></p>
-    </section>
-
-    <section>
-        <h2>3. Comparando Datos y Tipos</h2>
-        <button onclick="compararDatos()">Probar Comparaciones</button>
-        <p id="mensaje3"></p>
-    </section>
-
-    <section>
-        <h2>4. Objeto Ciudad</h2>
-        <button onclick="yoObjeto()">Mostrar Ciudad</button>
-        <p id="mensaje4"></p>
-    </section>
-
-    <section>
-        <h2>5. Doble de Elementos</h2>
-        <input type="text" id="arrayNumeros" placeholder="Ej: 1, 2, 3, 4">
-        <button onclick="doblarArray(document.getElementById('arrayNumeros').value)">Doblar</button>
-        <p id="mensaje5"></p>        
-    </section>
-
-    <section>
-        <h2>6. Triángulo de Asteriscos</h2>
-        <button onclick="dibujarTriangulos()">Dibujar</button>
-        <p id="trianguloA1"></p>
-        <p id="trianguloA2"></p>
-        <p id="trianguloA3"></p>
-        <p id="trianguloA4"></p>
-        <p id="trianguloA5"></p>
-
-        <p id="trianguloB1"></p>
-        <p id="trianguloB2"></p>
-        <p id="trianguloB3"></p>
-        <p id="trianguloB4"></p>
-        <p id="trianguloB5"></p>
-
-    </section>
-
-    <section>
-        <h2>7. Nombres con 'A'</h2>
-        <input type="text" id="nombresInput" placeholder="Poné nombres">
-        <button onclick="filtrarNombres(document.getElementById('nombresInput').value)">Filtrar</button>
-        <p id="mensaje7"></p>
-    </section>
-
-    <section>
-        <h2>8. Reemplazar Palabras</h2>
-        <input type="text" id="textoOriginal" placeholder="Texto" required>
-        <input type="text" id="palabraBuscar" placeholder="Buscar" required>
-        <input type="text" id="palabraReemplazo" placeholder="Reemplazar" required>
-        <button onclick="reemplazarPalabra(document.getElementById('textoOriginal').value, document.getElementById('palabraBuscar').value, document.getElementById('palabraReemplazo').value)">Reemplazar</button>
-        <p id="mensaje8"></p>
-    </section>
-
-    <section>
-        <h2>9. Cortar Texto</h2>
-        <input type="text" id="textoCortar" placeholder="Texto">
-        <input type="number" id="numCaracteres" placeholder="Cantidad">
-        <button onclick="cortarTexto(document.getElementById('textoCortar').value, document.getElementById('numCaracteres').value)">Cortar</button>
-        <p id="mensaje9"></p>
-    </section>    
-
-    <section>
-        <h2>10. String con Separador</h2>
-        <input type="text" id="listaSeparador" placeholder="Ej: uno,dos,tres">
-        <button onclick="separarLista(document.getElementById('listaSeparador').value)">Separar</button>
-        <p id="mensaje10"></p>
-    </section>
-
-    <section>
-        <h2>11. Calculadora de Recaudación</h2>
-        <input type="text" id="pedidosInput" placeholder='Ej: Pizza:15.50,Hamburguesa:8.75'>
-        <button onclick="calcularRecaudacion(document.getElementById('pedidosInput').value)">Calcular</button>
-        <p id="mensaje11"></p>
-    </section>
-        <script src="js/ejercicio.js"></script>
-
-</body>
-
-</html>
+<select id="ejercicioSeleccionado">
+    <option value="1">Calculadora de Edad</option>
+    <option value="2">Tirando Fruta</option>
+    <option value="3">Comparando Datos y Tipos</option>
+    <option value="4">Objeto Ciudad</option>
+    <option value="5">Doble de Elementos</option>
+    <option value="6">Triángulo de Asteriscos</option>
+    <option value="7">Nombres con 'A'</option>
+    <option value="8">Reemplazar Palabras</option>
+    <option value="9">Cortar Texto</option>
+    <option value="10">String con Separador</option>
+    <option value="11">Calculadora de Recaudación</option>
+  </select>
+  <button onclick="switchEjercicio(document.getElementById('ejercicioSeleccionado').value)">Ejecutar</button>
