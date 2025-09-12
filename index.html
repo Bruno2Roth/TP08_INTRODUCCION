@@ -6,22 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TP08_INTRODUCCION</title> 
     <link rel="stylesheet" href="style.css">
-    <script src="ejercicio.js"></script>
 
 </head>
 
 <body>
-    <h1 id="ejercicio1">Resultado</h1>
-    <h1 id="ejercicio2">Resultado</h1>
-    <h1 id="ejercicio3">Resultado</h1>
-    <h1 id="ejercicio4">Resultado</h1>
-    <h1 id="ejercicio5">Resultado</h1>
-    <h1 id="ejercicio6">Resultado</h1>
-    <h1 id="ejercicio7">Resultado</h1>
-    <h1 id="ejercicio8">Resultado</h1>
-    <h1 id="ejercicio9">Resultado</h1>
-    <h1 id="ejercicio10">Resultado</h1>
-    <h1 id="ejercicio11">Resultado</h1>
+    <section>
+        <h2>1. Calculadora de Edad</h2>
+        <input type="text" id="nombreEdad" placeholder="Nombre">
+        <input type="text" id="fechaEdad" placeholder="YYYY-MM-DD">
+        <button onclick="calcularEdad(document.getElementById('fechaEdad').value, document.getElementById('nombreEdad').value)">Calcular</button>
+        <p id="mensaje"></p>
+    </section>
+
+    <section>
+        <h2>2. Tirando Fruta</h2>
+        <input type="text" id="frutaInput" placeholder="Ingresá una fruta">
+        <button onclick="buscarFruta()">Buscar</button>
+        <p id="frutaResultado"></p>
+    </section>
+
+    <section>
+        <h2>3. Comparando Datos y Tipos</h2>
+        <button onclick="compararDatos()">Probar Comparaciones</button>
+        <p id="comparacionResultado"></p>
+    </section>
+
+    <section>
+        <h2>4. Objeto Ciudad</h2>
+        <button onclick="mostrarCiudad()">Mostrar Ciudad</button>
+        <p id="ciudadResultado"></p>
+    </section>
+
+    <section>
+        <h2>5. Doble de Elementos</h2>
+        <input type="text" id="arrayNumeros" placeholder="Ej: 1,2,3,4">
+        <button onclick="doblarArray()">Doblar</button>
+        <p id="dobleResultado"></p>
+    </section>
+
+    <section>
+        <h2>6. Triángulo de Asteriscos</h2>
+        <input type="number" id="alturaTriangulo" placeholder="Altura">
+        <button onclick="dibujarTriangulos()">Dibujar</button>
+        <pre id="trianguloResultado"></pre>
+    </section>
+
+    <section>
+        <h2>7. Nombres con 'A'</h2>
+        <input type="text" id="nombresInput" placeholder="Ej: Ana,Pedro,Alberto">
+        <button onclick="filtrarNombres()">Filtrar</button>
+        <p id="nombresResultado"></p>
+    </section>
+
+    <section>
+        <h2>8. Reemplazar Palabras</h2>
+        <input type="text" id="textoOriginal" placeholder="Texto">
+        <input type="text" id="palabraBuscar" placeholder="Buscar">
+        <input type="text" id="palabraReemplazo" placeholder="Reemplazar">
+        <button onclick="reemplazarPalabra()">Reemplazar</button>
+        <p id="reemplazoResultado"></p>
+    </section>
+
+    <section>
+        <h2>9. Cortar Texto</h2>
+        <input type="text" id="textoCortar" placeholder="Texto">
+        <input type="number" id="numCaracteres" placeholder="Cantidad">
+        <button onclick="cortarTexto()">Cortar</button>
+        <p id="corteResultado"></p>
+    </section>
+
+    <section>
+        <h2>10. String con Separador</h2>
+        <input type="text" id="listaSeparador" placeholder="Ej: uno,dos,tres">
+        <button onclick="separarLista()">Separar</button>
+        <p id="separadorResultado"></p>
+    </section>
+
+    <section>
+        <h2>11. Calculadora de Recaudación</h2>
+        <input type="text" id="pedidosInput" placeholder='Ej: Pizza:15.50,Hamburguesa:8.75'>
+        <button onclick="calcularRecaudacion()">Calcular</button>
+        <p id="recaudacionResultado"></p>
+    </section>
+        <script src="ejercicio.js"></script>
+
 </body>
 
 </html>
