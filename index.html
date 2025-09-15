@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +10,14 @@
   <script src="js/utils.js"></script>
 </head>
 
-<select id="ejercicioSeleccionado">
-    <option value="1">Calculadora de Edad</option>
-    <option value="2">Tirando Fruta</option>
-    <option value="3">Comparando Datos y Tipos</option>
-    <option value="4">Objeto Ciudad</option>
-    <option value="5">Doble de Elementos</option>
-    <option value="6">Triángulo de Asteriscos</option>
-    <option value="7">Nombres con 'A'</option>
-    <option value="8">Reemplazar Palabras</option>
-    <option value="9">Cortar Texto</option>
-    <option value="10">String con Separador</option>
-    <option value="11">Calculadora de Recaudación</option>
-  </select>
-  <button onclick="switchEjercicio(document.getElementById('ejercicioSeleccionado').value)">Ejecutar</button>
+  <button onclick="calcularEdad(document.getElementById('fechaEdad').value, document.getElementById('nombreEdad').value)">Calculadora de Edad</button>
+  <button onclick="tirarFruta(document.getElementById('ejercicioSeleccionado').value)">Tirando Fruta</button>
+  <button onclick="compararDatos()">Comparando Datos y Tipos</button>
+  <button onclick="yoObjeto()">Objeto Ciudad</button>
+  <button onclick="doblarArray(document.getElementById('arrayNumeros').value)">Doble de Elementos</button>
+  <button onclick="dibujarTriangulos()">Triángulo de Asteriscos</button>
+  <button onclick="filtrarNombres(document.getElementById('nombresInput').value)">Nombres con 'A'</button>
+  <button onclick="reemplazarPalabra(document.getElementById('textoOriginal').value,document.getElementById('palabraBuscar').value,document.getElementById('palabraReemplazo').value)">Reemplazar Palabras</button>
+  <button onclick="cortarTexto(document.getElementById('textoCortar').value, document.getElementById('numCaracteres').value)">Cortar Texto</button>
+  <button onclick="separarLista(document.getElementById('listaSeparador').value)">String con Separador</button>
+  <button onclick="calcularRecaudacion(document.getElementById('pedidosInput').value)">Calculadora de Recaudación</button>
